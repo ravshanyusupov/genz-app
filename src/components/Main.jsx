@@ -53,6 +53,7 @@ import post from '../assets/imgs/page/homepage1/img-post.jpg'
 import post2 from '../assets/imgs/page/homepage1/img-post2.jpg'
 import post3 from '../assets/imgs/page/homepage1/img-post3.jpg'
 import post4 from '../assets/imgs/page/homepage1/img-post4.jpg'
+import { Link } from 'react-router-dom'
 
 function Main() {
     return (

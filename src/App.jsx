@@ -1,13 +1,23 @@
-import Footer from './components/Footer.jsx'
-import Navbar  from "./components/Navbar.jsx";
-import Main from './components/Main.jsx'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import PageNotFound from "./pages/PageNotFound.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+
 function App() {
 
   return (
     <>
-        <Navbar/><br/><br/><br/>
-        <Main/>
-        <Footer/>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/register' element={<Register/>}/>
+                <Route path='/contact' element={<ContactPage/>}/>
+                <Route path='/*' element={<PageNotFound/>}/>
+            </Routes>
+        </BrowserRouter>
     </>
   )
 }
