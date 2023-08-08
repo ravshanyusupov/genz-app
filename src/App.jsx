@@ -1,9 +1,11 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Login from "./pages/Login.jsx";
-import Register from "./pages/Register.jsx";
-import PageNotFound from "./pages/PageNotFound.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import RegisterPage from "./pages/RegisterPage.jsx";
+import PageNotFoundPage from "./pages/PageNotFoundPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import PostDetailPage from "./pages/PostDetailPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
 
 function App() {
 
@@ -11,11 +13,13 @@ function App() {
     <>
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/login' element={<Login/>}/>
-                <Route path='/register' element={<Register/>}/>
+                <Route path='/' element={<HomePage/>}/>
+                <Route path='/about' element={<AboutPage/>}/>
+                <Route path='/login' element={<LoginPage/>}/>
+                <Route path='/register' element={<RegisterPage/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>
-                <Route path='/*' element={<PageNotFound/>}/>
+                <Route path='/post' element={<PostDetailPage/>}/>
+                <Route path='/*' element={<PageNotFoundPage/>}/>
             </Routes>
         </BrowserRouter>
     </>

@@ -3,19 +3,25 @@ import Footer from "../components/Footer.jsx";
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import api from "../axios.js";
-function Login() {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+import { useNavigate   } from 'react-router-dom';
+
+function LoginPage() {
+    const [form, setForm] = useState({email: '', password: ''})
+    const {email, password} = form;
+    const getValues = (e) => {
+        setForm({...form, [e.target.name]: e.target.value})
+    }
+    const navigate = useNavigate()
     const login = async (e) => {
         e.preventDefault()
-        try {
             const res = await api.post(
                 '/login',
                 {email: email, password: password})
-        }catch (e) {
-            console.log(e.method)
-        }
-
+                .then(res => {
+                    console.log(res)
+                    navigate('/')
+                })
+                .catch(err => console.log(err))
     }
     return(
         <>
@@ -33,17 +39,21 @@ function Login() {
                                         <form action="#" onSubmit={login}>
                                             <div className="form-group">
                                                 <input className="form-control bg-gray-850 border-gray-800"
-                                                       type="text"
+                                                       type="email"
+                                                       required
+                                                       name='email'
                                                        value={email}
-                                                       onInput={e => setEmail(e.target.value)}
-                                                       placeholder="User name"/>
+                                                       onInput={e => getValues(e)}
+                                                       placeholder="Email"/>
                                             </div>
                                             <div className="form-group position-relative">
                                                 <input className="form-control bg-gray-850 border-gray-800 password"
                                                        type="password"
+                                                       required
+                                                       name='password'
                                                        placeholder="Password"
                                                        value={password}
-                                                       onInput={e => setPassword(e.target.value)}
+                                                       onInput={e => getValues(e)}
                                                 />
 
                                                 <span className="viewpass"></span>
@@ -74,4 +84,4 @@ function Login() {
     )
 }
 
-export default Login
+export default LoginPage

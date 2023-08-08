@@ -3,7 +3,7 @@ import Footer from "../components/Footer.jsx";
 import pageNotFound from '../assets/imgs/page/404/404.svg'
 import {Link} from "react-router-dom";
 
-function PageNotFound() {
+function PageNotFoundPage() {
     return(
         <>
             <Navbar/>
@@ -41,4 +41,4 @@ function PageNotFound() {
     )
 }
 
-export default PageNotFound
+export default PageNotFoundPage

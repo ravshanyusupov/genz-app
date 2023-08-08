@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import {CaretRightFilled} from "@ant-design/icons";
 
 function ContactPage() {
     return (
@@ -80,7 +81,7 @@ function ContactPage() {
                                             <div className="text-center mb-50"><a
                                                 className="btn btn-linear btn-load-more btn-radius-8 hover-up">
                                                 Send Message
-                                                <i className="fi-rr-arrow-small-right"></i></a></div>
+                                                 <i><CaretRightFilled /></i></a></div>
                                         </div>
                                     </div>
                                 </div>

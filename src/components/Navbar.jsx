@@ -1,8 +1,15 @@
 import logo from '../assets/imgs/template/logo.svg'
 import logo_2 from '../assets/imgs/template/logo-day.svg'
 import {Link} from "react-router-dom";
+import Loader from "./Loader.jsx";
+import {useState} from "react";
 
 function Navbar() {
+    const [active, setActive] = useState('')
+    const isLogged = false
+    const logout = () => {
+        console.log('log out')
+    }
     return (
         <>
             <header className="header sticky-bar bg-gray-900">
@@ -15,26 +22,10 @@ function Navbar() {
                         <div className="header-nav">
                             <nav className="nav-main-menu d-none d-xl-block">
                                 <ul className="main-menu">
-                                    <li className="has-children"><Link className="active" to="/">Home</Link>
-                                        <ul className="sub-menu">
-                                            <li><a className="color-gray-500" href="index.html">Homepage - 1</a></li>
-                                            <li><a className="color-gray-500" href="index-2.html">Homepage - 2</a></li>
-                                            <li><a className="color-gray-500" href="index-3.html">Homepage - 3</a></li>
-                                            <li><a className="color-gray-500" href="index-4.html">Homepage - 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children"><a className="color-gray-500" href="page-about.html">About
-                                        Me</a>
-                                        <ul className="sub-menu">
-                                            <li><a className="color-gray-500" href="page-portfolio.html">My
-                                                Portfolio</a>
-                                            </li>
-                                            <li><a className="color-gray-500" href="page-portfolio-2.html">My Portfolio
-                                                2</a></li>
-                                            <li><a className="color-gray-500" href="portfolio-details.html">Portfolio
-                                                Details</a></li>
-                                        </ul>
-                                    </li>
+                                    <li className="has-children"><Link
+                                        className={active === 'Home' ? 'active' : 'color-gray-500'}
+                                        onClick={() => setActive('Home')} to="/">Home</Link></li>
+                                    <li className="has-children"><Link className="color-gray-500" to="/about">About Me</Link></li>
                                     <li className="has-children"><a className="color-gray-500" href="#">Category</a>
                                         <ul className="sub-menu two-col">
                                             <li><a className="color-gray-500" href="blog-archive.html">Blog Category
@@ -79,7 +70,11 @@ function Navbar() {
                                             <li><a className="color-gray-500" href="page-404.html">Page 404</a></li>
                                         </ul>
                                     </li>
-                                    <li><Link className="color-gray-500" to="/contact">Contact</Link></li>
+                                    <li><Link
+                                        to="/contact"
+                                        className={active === 'Contact' ? 'active' : 'color-gray-500'}
+                                        onClick={() => setActive('Contact')}
+                                    >Contact</Link></li>
                                 </ul>
                             </nav>
                             <div className="burger-icon burger-icon-white"><span
@@ -107,8 +102,16 @@ function Navbar() {
                                            role="switch"/>
                                 </div>
                             </div>
-                            <Link className="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow"
-                                  to="/login">Sign In</Link>
+                            {!isLogged ?
+                                <button
+                                    className="btn btn-danger d-none d-sm-inline-block hover-up hover-shadow"
+                                    onClick={logout}
+                                >Logout</button>
+                                : <Link className="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow"
+                                        to="/login" >Sign In</Link>
+                            }
+
+
                         </div>
                     </div>
                 </div>
