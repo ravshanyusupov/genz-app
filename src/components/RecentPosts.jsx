@@ -9,13 +9,9 @@ function RecentPosts() {
     const [posts, setPosts] = useState([]);
 
     //////// pagination /////////
-    const itemsPerPage = 2;
+    const itemsPerPage = 3;
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = Math.ceil(posts.length / itemsPerPage);
-    const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
-        console.log(pageNumber)
-    };
     const startIndex = (currentPage - 1) * itemsPerPage; // 0
     const endIndex = startIndex + itemsPerPage; // 2
     const displayedItems = posts.slice(startIndex, endIndex);
@@ -64,7 +60,7 @@ function RecentPosts() {
                         ))}
 
                     </div>
-                    <Pagination handlePageChange={handlePageChange} displayedItems={displayedItems}/>
+                    <Pagination handlePageChange={setCurrentPage} totalPages={totalPages}/>
                 </div>
                 <PopularPosts/>
             </div>

@@ -1,14 +1,14 @@
 import logo from '../assets/imgs/template/logo.svg'
 import logo_2 from '../assets/imgs/template/logo-day.svg'
 import {Link} from "react-router-dom";
-import Loader from "./Loader.jsx";
 import {useState} from "react";
+import {isAuthenticated} from "../actions/auth.js";
+import {logoutUser} from "../actions/auth.js";
 
 function Navbar() {
     const [active, setActive] = useState('')
-    const isLogged = false
     const logout = () => {
-        console.log('log out')
+        alert('fgfgf')
     }
     return (
         <>
@@ -26,50 +26,8 @@ function Navbar() {
                                         className={active === 'Home' ? 'active' : 'color-gray-500'}
                                         onClick={() => setActive('Home')} to="/">Home</Link></li>
                                     <li className="has-children"><Link className="color-gray-500" to="/about">About Me</Link></li>
-                                    <li className="has-children"><a className="color-gray-500" href="#">Category</a>
-                                        <ul className="sub-menu two-col">
-                                            <li><a className="color-gray-500" href="blog-archive.html">Blog Category
-                                                1</a>
-                                            </li>
-                                            <li><a className="color-gray-500" href="blog-archive-2.html">Blog Category
-                                                2</a>
-                                            </li>
-                                            <li><a className="color-gray-500" href="blog-archive-3.html">Blog Category
-                                                3</a>
-                                            </li>
-                                            <li><a className="color-gray-500" href="blog-archive-4.html">Blog Category
-                                                4</a>
-                                            </li>
-                                            <li><a className="color-gray-500" href="blog-archive-5.html">Blog Category
-                                                5</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children"><a className="color-gray-500" href="#">Single Post</a>
-                                        <ul className="sub-menu two-col">
-                                            <li><a className="color-gray-500" href="single-sidebar.html">Blog Single
-                                                1</a>
-                                            </li>
-                                            <li><a className="color-gray-500" href="single-no-sidebar.html">Blog Single
-                                                2</a></li>
-                                            <li><a className="color-gray-500" href="single-center.html">Blog Single
-                                                3</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children"><a className="color-gray-500" href="#">Pages</a>
-                                        <ul className="sub-menu two-col">
-                                            <li><a className="color-gray-500" href="page-about.html">About</a></li>
-                                            <li><a className="color-gray-500" href="page-author.html">Author posts</a>
-                                            </li>
-                                            <li><a className="color-gray-500" href="page-contact.html">Contact</a></li>
-                                            <li><a className="color-gray-500" href="page-search.html">Search results</a>
-                                            </li>
-                                            <li><a className="color-gray-500" href="page-login.html">Login</a></li>
-                                            <li><a className="color-gray-500" href="page-signup.html">Signup</a></li>
-                                            <li><a className="color-gray-500" href="page-404.html">Page 404</a></li>
-                                        </ul>
-                                    </li>
+                                    <li className="has-children"><a className="color-gray-500">Category</a></li>
+                                    <li className="has-children"><a className="color-gray-500" href="#">Projects</a></li>
                                     <li><Link
                                         to="/contact"
                                         className={active === 'Contact' ? 'active' : 'color-gray-500'}
@@ -102,10 +60,10 @@ function Navbar() {
                                            role="switch"/>
                                 </div>
                             </div>
-                            {!isLogged ?
+                            {isAuthenticated ?
                                 <button
                                     className="btn btn-danger d-none d-sm-inline-block hover-up hover-shadow"
-                                    onClick={logout}
+                                    onClick={logoutUser}
                                 >Logout</button>
                                 : <Link className="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow"
                                         to="/login" >Sign In</Link>

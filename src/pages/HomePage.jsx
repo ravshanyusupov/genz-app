@@ -6,7 +6,6 @@ function HomePage() {
 
   return (
     <>
-        <Loader/>
         <Navbar/>
         <Main/>
         <Footer/>

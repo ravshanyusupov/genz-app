@@ -8,7 +8,6 @@ import PostDetailPage from "./pages/PostDetailPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 
 function App() {
-
   return (
     <>
         <BrowserRouter>

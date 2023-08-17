@@ -2,37 +2,23 @@ import {useState} from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import {Link} from "react-router-dom";
-import api from "../axios.js";
-import login from "./LoginPage.jsx";
-import { useNavigate   } from 'react-router-dom';
+import {registerUser} from '../actions/auth.js'
+import { useNavigate } from 'react-router-dom';
+import {isAuthenticated} from "../actions/auth.js";
 
 
 
 function RegisterPage() {
-    const [name, setName] = useState('')
-    const [username, setUsername] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [passwordConfirmation, setPasswordConfirmation] = useState('')
-    const navigate = useNavigate()
-    const submitForm = async (e) => {
-        e.preventDefault()
-        await api.post('register',
-            {
-                name: name,
-                username: username,
-                email: email,
-                password: password,
-                password_confirmation: passwordConfirmation
-            })
-            .then(res => {
-                console.log(res)
-                localStorage.setItem('token', res.data.data.token)
-                navigate('/')
+    const [form, setForm] = useState({name: '', email: '', username: '', password: '', passwordConfirmation: ''})
+    const {name, email, username, password, passwordConfirmation} = form
+    const getFormData = (e) => {setForm({...form, [e.target.name]: e.target.value})}
 
-            })
-            .catch(err => console.log(err.response.data.message))
+    const navigate = useNavigate()
+    const submitForm = (e) => {
+        e.preventDefault()
+        registerUser(name, email, username, password, passwordConfirmation)
     }
+    if (isAuthenticated) navigate('/')
     return (
         <>
             <Navbar/>
@@ -54,7 +40,8 @@ function RegisterPage() {
                                                     placeholder="Full name"
                                                     required
                                                     value={name}
-                                                    onInput={e => setName(e.target.value)}
+                                                    name='name'
+                                                    onInput={e => getFormData(e)}
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -64,7 +51,8 @@ function RegisterPage() {
                                                     placeholder="Email"
                                                     required
                                                     value={email}
-                                                    onInput={e => setEmail(e.target.value)}
+                                                    name='email'
+                                                    onInput={e => getFormData(e)}
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -74,7 +62,8 @@ function RegisterPage() {
                                                     placeholder="User name"
                                                     required
                                                     value={username}
-                                                    onInput={e => setUsername(e.target.value)}
+                                                    name='username'
+                                                    onInput={e => getFormData(e)}
                                                 />
                                             </div>
                                             <div className="form-group position-relative">
@@ -84,7 +73,8 @@ function RegisterPage() {
                                                     placeholder="Password"
                                                     required
                                                     value={password}
-                                                    onInput={e => setPassword(e.target.value)}
+                                                    name='password'
+                                                    onInput={e => getFormData(e)}
                                                 /><span
                                                 className="viewpass"></span>
                                             </div>
@@ -95,7 +85,8 @@ function RegisterPage() {
                                                     placeholder="Confirm password"
                                                     required
                                                     value={passwordConfirmation}
-                                                    onInput={e => setPasswordConfirmation(e.target.value)}
+                                                    name='passwordConfirmation'
+                                                    onInput={e => getFormData(e)}
                                                 /><span
                                                 className="viewpass"></span>
                                             </div>

@@ -8,7 +8,12 @@ import flow from '../assets/imgs/page/homepage3/flow.svg'
 import evara from '../assets/imgs/page/homepage3/evara.svg'
 import img7 from '../assets/imgs/page/about/img7.png'
 import Pagination from "../components/Pagination.jsx";
+import {useState, useContext} from "react";
+import {postContext} from "../context/postContext.jsx";
+
 function AboutPage() {
+    const itemPerPage = 4;
+    const [currentPage, setCurrentPage] = useState(1)
     return(
         <>
            <Navbar/>
@@ -86,7 +91,7 @@ function AboutPage() {
                                         </div>
                                     </div>
                                 </div>
-                                {/*<Pagination/>*/}
+                                <Pagination/>
                                 <div className="text-center mt-70 mb-50">
                                     <h2 className="color-linear d-inline-block mb-20 wow animate__animated animate__fadeInUp">My
                                         Services</h2>
