@@ -1,10 +1,10 @@
 import loader from "../assets/imgs/template/favicon.svg";
 
 function Loader() {
-    setTimeout(() => {
-        const main = document.getElementById('preloader-active')
-        main.style.display = 'none'
-    },500)
+    // setTimeout(() => {
+    //     const main = document.getElementById('preloader-active')
+    //     main.style.display = 'none'
+    // },500)
     return(
         <>
             <div id="preloader-active">

@@ -8,8 +8,18 @@ import news4 from "../assets/imgs/page/homepage2/news4.png";
 import author4 from "../assets/imgs/page/homepage1/author4.png";
 import news5 from "../assets/imgs/page/homepage2/news5.png";
 import author5 from "../assets/imgs/page/homepage1/author5.png";
+import api from "../axios.js";
+import {useEffect} from "react";
 
 function Posts() {
+    const getPosts = async () => {
+        await api.get('posts')
+             .then(res => console.log(res))
+             .catch(err => console.log(err))
+    }
+    useEffect(() => {
+        // getPosts()
+    }, []);
     return (
         <>
             <h2 className="color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp">Editor's

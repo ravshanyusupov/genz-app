@@ -2,9 +2,8 @@ import {useState} from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import {Link} from "react-router-dom";
-import {registerUser} from '../actions/auth.js'
 import { useNavigate } from 'react-router-dom';
-import {isAuthenticated} from "../actions/auth.js";
+import api from "../axios.js";
 
 
 
@@ -14,11 +13,23 @@ function RegisterPage() {
     const getFormData = (e) => {setForm({...form, [e.target.name]: e.target.value})}
 
     const navigate = useNavigate()
-    const submitForm = (e) => {
+    const registerUser = async (e) => {
         e.preventDefault()
-        registerUser(name, email, username, password, passwordConfirmation)
+        await api.post('register',
+            {
+                name: name,
+                username: username,
+                email: email,
+                password: password,
+                password_confirmation: passwordConfirmation
+            })
+            .then(res => {
+                console.log(res)
+                localStorage.setItem('token', res.data.data.token)
+                navigate('/')
+            })
+            .catch(err => console.log(err.response.data.message))
     }
-    if (isAuthenticated) navigate('/')
     return (
         <>
             <Navbar/>
@@ -32,7 +43,7 @@ function RegisterPage() {
                                 </div>
                                 <div className="box-form-login pb-50">
                                     <div className="form-login bg-gray-850 border-gray-800 text-start">
-                                        <form action="#" onSubmit={submitForm}>
+                                        <form onSubmit={registerUser}>
                                             <div className="form-group">
                                                 <input
                                                     className="form-control bg-gray-850 border-gray-800"

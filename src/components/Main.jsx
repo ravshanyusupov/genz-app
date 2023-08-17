@@ -190,7 +190,6 @@ function Main() {
                         </div>
                     </div>
                 </main>
-            <Loader/>
         </>
     );
 }

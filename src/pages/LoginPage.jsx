@@ -1,21 +1,31 @@
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import {Link} from "react-router-dom";
-import {useEffect, useState} from "react";
-import { useNavigate   } from 'react-router-dom';
-import {isAuthenticated, loginUser} from '../actions/auth.js'
+import {useState} from "react";
+import {useNavigate} from 'react-router-dom';
+import api from "../axios.js";
 
-function LoginPage({loginUser}) {
+function LoginPage() {
     const [form, setForm] = useState({email: '', password: ''})
     const {email, password} = form;
-    const getValues = (e) => {setForm({...form, [e.target.name]: e.target.value})}
+    const getValues = (e) => {
+        setForm({...form, [e.target.name]: e.target.value})
+    }
     const navigate = useNavigate()
 
-    const login = (e) => {
+    const loginUser = async (e) => {
         e.preventDefault()
-        loginUser(email, password)
-    }
-    return(
+        await api.post(
+            '/login',
+            {email: email, password: password})
+            .then(res => {
+                console.log(res)
+                navigate('/')
+                localStorage.setItem('token', res.data.data.token)
+            })
+            .catch(err => console.log(err))
+    };
+    return (
         <>
             <Navbar/>
             <main className="main">
@@ -28,7 +38,7 @@ function LoginPage({loginUser}) {
                                 </div>
                                 <div className="box-form-login pb-50">
                                     <div className="form-login bg-gray-850 border-gray-800 text-start">
-                                        <form onSubmit={login}>
+                                        <form onSubmit={loginUser}>
                                             <div className="form-group">
                                                 <input className="form-control bg-gray-850 border-gray-800"
                                                        type="email"
