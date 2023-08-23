@@ -23,7 +23,7 @@ function PopularTags() {
                 {tags.map(item => (
                     <div className="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6" key={item.id}>
                         <div
-                            className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeIn"
+                            className="card-style-2 hover-up wow animate__animated animate__fadeIn"
                             data-wow-delay="0s">
                             <div className="card-image"><Link to={`/category/${item.id}`}><img
                                 src={item.image ? item.image : tag1} alt={item.name}/></Link></div>

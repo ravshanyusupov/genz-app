@@ -37,11 +37,11 @@ function Posts() {
                             picked</h2>
                         <p className="text-lg color-gray-500 wow animate__animated animate__fadeInUp">Featured
                             and highly rated articles</p>
-                        <div className="row mt-70">
+                        <div className="row mt-70 ">
                             {
                                 col6Posts?.map(post => (
                                     <div className="col-lg-6 wow animate__animated animate__fadeIn" key={post.id}>
-                                        <div className="card-blog-1 hover-up">
+                                        <div className="card-blog-1  hover-up">
                                             <div className="card-image mb-20"><a className="post-type"></a><Link
                                                 to={`/single-post/${post.id}`}><img
                                                 src={post.image ? post.image : new2} alt="Genz"/></Link></div>
@@ -57,7 +57,7 @@ function Posts() {
                                                     </div>
                                                 </div>
                                                 <Link to={`/single-post/${post.id}`}>
-                                                    <h4 className="color-white mt-20">{post.title}</h4></Link>
+                                                    <h4 className="color-gray-400 mt-20">{post.title}</h4></Link>
                                                 <div className="row align-items-center mt-25">
                                                     <div className="col-7">
                                                         <div className="box-author"><img
@@ -97,7 +97,7 @@ function Posts() {
                                                     </div>
                                                 </div>
                                                 <Link to={`/single-post/${post.id}`}>
-                                                    <h5 className="color-white mt-20">{post.title}</h5></Link>
+                                                    <h5 className="color-gray-400 mt-20">{post.title}</h5></Link>
                                                 <div className="row align-items-center mt-25">
                                                     <div className="col-7">
                                                         <div className="box-author"><img

@@ -1,11 +1,13 @@
 import logo from '../assets/imgs/template/logo.svg'
+import logoday from '../assets/imgs/template/logo-day.svg'
 import logo_2 from '../assets/imgs/template/logo-day.svg'
 import {Link, useNavigate} from "react-router-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import api from "../axios.js";
 
 function Navbar() {
     const [active, setActive] = useState('')
+    const [mode, setMode] = useState(true)
     const token = localStorage.getItem('token')
     const navigate = useNavigate()
     const logoutUser = async () => {
@@ -18,6 +20,37 @@ function Navbar() {
             .catch(err => console.log(err))
         localStorage.removeItem('token')
     }
+    const modeChange = () => {
+        setMode(!mode)
+        localStorage.setItem('mode', mode)
+        const root = document.documentElement;
+        if (!mode){
+            root.style.setProperty("--bg-color-900", "#0F172A");
+            root.style.setProperty("--bg-color-850", "#131C31");
+
+            root.style.setProperty("--color-500", "#7F92B0");
+            root.style.setProperty("--color-50", "#E6F0FF");
+            root.style.setProperty("--color-600", "#7F92B0");
+            root.style.setProperty("--color-700", "#66768F");
+            root.style.setProperty("--color-900", "#0F172A");
+            root.style.setProperty("--color-400", "#A7BDDD");
+        }
+        else {
+            ///////////day mode//////////
+            root.style.setProperty("--bg-color-900", "#E6F0FF");
+            root.style.setProperty("--bg-color-850", "#e5ecf9");
+
+            root.style.setProperty("--color-500", "#7F92B0");
+            root.style.setProperty("--color-50", "#E6F0FF");
+            root.style.setProperty("--color-600", "#7F92B0");
+            root.style.setProperty("--color-700", "#66768F");
+            root.style.setProperty("--color-900", "#0F172A");
+            root.style.setProperty("--color-400", "#323232");
+        }
+    // #323232
+    }
+    useEffect(() => {
+    }, [modeChange]);
     return (
         <>
             <header className="header sticky-bar bg-gray-900">
@@ -25,8 +58,8 @@ function Navbar() {
                     <div className="main-header">
                         <div className="header-logo"><Link className="d-flex" to="/"><img className="logo-night"
                                                                                           alt="GenZ"
-                                                                                          src={logo}/><img
-                            className="d-none logo-day" alt="GenZ" src={logo_2}/></Link></div>
+                                                                                          src={mode ? logo : logoday}/><img
+                            className="d-none logo-day" alt="GenZ" src={mode ? logo : logoday}/></Link></div>
                         <div className="header-nav">
                             <nav className="nav-main-menu d-none d-xl-block">
                                 <ul className="main-menu">
@@ -65,8 +98,14 @@ function Navbar() {
                             </div>
                             <div className="switch-button">
                                 <div className="form-check form-switch">
-                                    <input className="form-check-input" id="flexSwitchCheckChecked" type="checkbox"
-                                           role="switch"/>
+                                    <input
+                                        className="form-check-input"
+                                        id="flexSwitchCheckChecked"
+                                        type="checkbox"
+                                        role="switch"
+                                        defaultChecked={mode}
+                                        onInput={modeChange}
+                                    />
                                 </div>
                             </div>
                             {token ?

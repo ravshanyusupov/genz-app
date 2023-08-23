@@ -41,7 +41,7 @@ function RecentPosts() {
                             </div>
                             <div className="card-info"><a
                                 className="btn btn-tag bg-gray-800 hover-up">Working Tips</a><Link to={`/single-post/${item.id}`}>
-                                <h4 className="mt-15 mb-20 color-white">{item.title}</h4></Link>
+                                <h4 className="mt-15 mb-20 color-gray-400">{item.title}</h4></Link>
                                 <p className="color-gray-500">{item.description}</p>
                                 <div className="row mt-20">
                                     <div className="col-7">

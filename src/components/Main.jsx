@@ -42,7 +42,7 @@ function Main() {
                                                 </div>
                                                 <div
                                                     className="box-subscriber mt-40 mb-50 wow animate__animated animate__fadeInUp">
-                                                    <div className="inner-subscriber bg-gray-800">
+                                                    <div className="inner-subscriber bg-gray-850">
                                                         <form className="d-flex" action="#">
                                                             <input className="input-sybscriber" type="text"
                                                                    placeholder="Type your email address"/>

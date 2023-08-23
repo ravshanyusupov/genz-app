@@ -16,12 +16,12 @@ function Footer() {
                             <p className="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">When
                                 an unknown prnoto sans took a galley and scrambled it to make specimen book not only
                                 five When an unknown prnoto sans took a galley and scrambled it to five centurie.</p>
-                            <h6 className="color-white mb-5 wow animate__animated animate__fadeInUp">Address</h6>
+                            <h6 className="color-gray-400 mb-5 wow animate__animated animate__fadeInUp">Address</h6>
                             <p className="text-sm color-gray-500 wow animate__animated animate__fadeInUp">123 Main
                                 Street<br/>New York, NY 10001</p>
                         </div>
                         <div className="col-lg-4 mb-30">
-                            <h6 className="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Categories</h6>
+                            <h6 className="text-lg mb-30 color-gray-400 wow animate__animated animate__fadeInUp">Categories</h6>
                             <div className="row">
                                 <div className="col-6">
                                     <ul className="menu-footer">
@@ -58,7 +58,7 @@ function Footer() {
                             </div>
                         </div>
                         <div className="col-lg-4 mb-30">
-                            <h4 className="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Newsletter</h4>
+                            <h4 className="text-lg mb-30 color-gray-400 wow animate__animated animate__fadeInUp">Newsletter</h4>
                             <p className="text-base color-gray-500 wow animate__animated animate__fadeInUp">Sign up to
                                 be first to receive the latest stories inspiring us, case studies, and industry
                                 news.</p>

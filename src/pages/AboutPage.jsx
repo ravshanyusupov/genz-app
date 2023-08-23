@@ -26,14 +26,14 @@ function AboutPage() {
                                 <div className="text-center mt-70 mb-50">
                                     <h2 className="color-linear d-inline-block mb-20 wow animate__animated animate__fadeInUp">My
                                         Latest Projects</h2>
-                                    <p className="text-lg color-gray-500 wow animate__animated animate__fadeInUp">The
+                                    <p className="text-lg color-gray-400 wow animate__animated animate__fadeInUp">The
                                         convention is the main event of the year for professionals in<br
                                             className="d-none d-lg-block"/>the world of design and architecture.</p>
                                 </div>
                                 <div className="row text-center filter-nav">
                                     <div className="col-lg-12"><span className="wow animate__animated animate__fadeInUp"
                                                                      data-wow-delay=".0s"><span
-                                        className="btn btn-border-linear btn-filter hover-up" data-filter="">All</span></span><span
+                                        className="btn btn-border-linear btn-filter hover-up " data-filter="">All</span></span><span
                                         className="wow animate__animated animate__fadeInUp" data-wow-delay=".1s"><span
                                         className="btn btn-border-linear btn-filter hover-up" data-filter="web">Web Development</span></span><span
                                         className="wow animate__animated animate__fadeInUp" data-wow-delay=".2s"><span
@@ -56,7 +56,7 @@ function AboutPage() {
                                                             src={img7} alt="Genz"/>
                                                             <div className="card-info card-bg-2">
                                                                 <div className="info-bottom mb-15">
-                                                                    <h3 className="color-white mb-10">Flyer design</h3>
+                                                                    <h3 className="color-gray-400 mb-10">Flyer design</h3>
                                                                     <p className="color-gray-500 text-sm">Lorem ipsum
                                                                         dolor sit amet, consectetur adipiscing elit.
                                                                         Nullam volutpat vitae risus eget maximus.
@@ -78,7 +78,7 @@ function AboutPage() {
                                                             src={img7} alt="Genz"/>
                                                             <div className="card-info card-bg-2">
                                                                 <div className="info-bottom mb-15">
-                                                                    <h3 className="color-white mb-10">Logo design</h3>
+                                                                    <h3 className="color-gray-400 mb-10">Logo design</h3>
                                                                     <p className="color-gray-500 text-sm">Lorem ipsum
                                                                         dolor sit amet, consectetur adipiscing elit.
                                                                         Nullam volutpat vitae risus eget maximus.
@@ -105,42 +105,42 @@ function AboutPage() {
                                         <div className="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn"
                                              data-wow-delay="0s"><span
                                             className="item-icon bg-gray-950 icon-motion"></span>
-                                            <h5 className="color-white mb-15">Motion &<br/>Web Graphy</h5>
+                                            <h5 className="color-gray-400 mb-15">Motion &<br/>Web Graphy</h5>
                                             <p className="text-base color-gray-700">NetTracking" is a very powerful Web
                                                 2.0 site search engine allows you to find email allerts</p>
                                         </div>
                                         <div className="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn"
                                              data-wow-delay="0.1s"><span
                                             className="item-icon bg-gray-950 icon-ui"></span>
-                                            <h5 className="color-white mb-15">UI/Ux<br/>Consultancy</h5>
+                                            <h5 className="color-gray-400 mb-15">UI/Ux<br/>Consultancy</h5>
                                             <p className="text-base color-gray-700">NetTracking" is a very powerful Web
                                                 2.0 site search engine allows you to find email allerts</p>
                                         </div>
                                         <div className="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn"
                                              data-wow-delay="0.2s"><span
                                             className="item-icon bg-gray-950 icon-branding"></span>
-                                            <h5 className="color-white mb-15">Branding<b/>& Design</h5>
+                                            <h5 className="color-gray-400 mb-15">Branding<b/>& Design</h5>
                                             <p className="text-base color-gray-700">NetTracking" is a very powerful Web
                                                 2.0 site search engine allows you to find email allerts</p>
                                         </div>
                                         <div className="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn"
                                              data-wow-delay="0s"><span
                                             className="item-icon bg-gray-950 icon-product"></span>
-                                            <h5 className="color-white mb-15">Product<br/>Photography</h5>
+                                            <h5 className="color-gray-400 mb-15">Product<br/>Photography</h5>
                                             <p className="text-base color-gray-700">NetTracking" is a very powerful Web
                                                 2.0 site search engine allows you to find email allerts</p>
                                         </div>
                                         <div className="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn"
                                              data-wow-delay="0.1s"><span
                                             className="item-icon bg-gray-950 icon-key"></span>
-                                            <h5 className="color-white mb-15">Key Seo<br/>Optimization</h5>
+                                            <h5 className="color-gray-400 mb-15">Key Seo<br/>Optimization</h5>
                                             <p className="text-base color-gray-700">NetTracking" is a very powerful Web
                                                 2.0 site search engine allows you to find email allerts</p>
                                         </div>
                                         <div className="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn"
                                              data-wow-delay="0.2s"><span
                                             className="item-icon bg-gray-950 icon-social"></span>
-                                            <h5 className="color-white mb-15">Social<br/>Management</h5>
+                                            <h5 className="color-gray-400 mb-15">Social<br/>Management</h5>
                                             <p className="text-base color-gray-700">NetTracking" is a very powerful Web
                                                 2.0 site search engine allows you to find email allerts</p>
                                         </div>
@@ -158,7 +158,7 @@ function AboutPage() {
                                                 <button className="accordion-button" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                                         aria-expanded="true" aria-controls="collapseOne"><span
-                                                    className="heading-4 color-white">Understanding company billing and accounts</span>
+                                                    className="heading-4 color-gray-400">Understanding company billing and accounts</span>
                                                 </button>
                                             </h2>
                                             <div className="accordion-collapse collapse show" id="collapseOne"
@@ -176,7 +176,7 @@ function AboutPage() {
                                                 <button className="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                         aria-expanded="false" aria-controls="collapseTwo"><span
-                                                    className="heading-4 color-white">Updating your billing credit card</span>
+                                                    className="heading-4 color-gray-400">Updating your billing credit card</span>
                                                 </button>
                                             </h2>
                                             <div className="accordion-collapse collapse" id="collapseTwo"
@@ -194,7 +194,7 @@ function AboutPage() {
                                                 <button className="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                         aria-expanded="false" aria-controls="collapseThree"><span
-                                                    className="heading-4 color-white">Application keyboard shortcuts and tips</span>
+                                                    className="heading-4 color-gray-400">Application keyboard shortcuts and tips</span>
                                                 </button>
                                             </h2>
                                             <div className="accordion-collapse collapse" id="collapseThree"
@@ -212,7 +212,7 @@ function AboutPage() {
                                                 <button className="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                         aria-expanded="false" aria-controls="collapseFour"><span
-                                                    className="heading-4 color-white">Cancelling a website subscription</span>
+                                                    className="heading-4 color-gray-400">Cancelling a website subscription</span>
                                                 </button>
                                             </h2>
                                             <div className="accordion-collapse collapse" id="collapseFour"

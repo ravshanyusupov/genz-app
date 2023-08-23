@@ -34,6 +34,10 @@ TABLE CONTENT
 @import url(./assets/css/plugins/swiper-bundle.min.css);
 @import url(./assets/css/plugins/animate.min.css);
 /*RESET*/
+
+
+
+
 html,
 body,
 div,
@@ -486,9 +490,7 @@ h6 {
   color: #000000;
 }
 
-.color-gray-50 {
-  color: #E6F0FF;
-}
+
 
 .color-gray-100 {
   color: #D8E6FB;
@@ -502,21 +504,6 @@ h6 {
   color: #B8CDEB;
 }
 
-.color-gray-400 {
-  color: #A7BDDD;
-}
-
-.color-gray-500 {
-  color: #94A9C9;
-}
-
-.color-gray-600 {
-  color: #7F92B0;
-}
-
-.color-gray-700 {
-  color: #66768F;
-}
 
 .color-gray-800 {
   color: #222F43;
@@ -526,10 +513,66 @@ h6 {
   color: #131C31 !important;
 }
 
-.color-gray-900 {
-  color: #0F172A !important;
+/*////////////////////////////////////////////////////////////////////*/
+
+
+
+:root {
+  --bg-color-900: #0F172A;
+  --bg-color-850: #131C31;
+  --color-500: #7F92B0;
+  --color-50: #E6F0FF;
+  --color-600: #7F92B0;
+  --color-700: #66768F;
+  --color-900: #0F172A;
+  --color-400: #A7BDDD;
 }
 
+.color-gray-50 {
+  /*color: #E6F0FF;*/
+  color: var(--color-50)
+}
+
+.color-gray-500 {
+  /*color: #7F92B0;*/
+  color: var(--color-500);
+}
+
+.color-gray-400 {
+  /*color: #A7BDDD;*/
+  color: var(--color-400);
+}
+
+.color-gray-600 {
+  /*color: #7F92B0;*/
+  color: var(--color-600);
+}
+
+.color-gray-700 {
+  /*color: #66768F;*/
+  color: var(--color-700);
+}
+
+.color-gray-900 {
+  /*color: #0F172A !important;*/
+  color: var(--color-700);
+}
+
+.bg-gray-850 {
+  background-color: var(--bg-color-850);
+}
+
+.bg-gray-900 {
+  background-color: var(--bg-color-900);
+}
+
+
+#root{
+  background-color: var(--bg-color-900);
+}
+
+
+/*////////////////////////////////////////////////////////////////////*/
 .color-gray-950 {
   color: #0B1222 !important;
 }
@@ -570,13 +613,6 @@ h6 {
   background-color: #222F43 !important;
 }
 
-.bg-gray-850 {
-  background-color: #131C31;
-}
-
-.bg-gray-900 {
-  background-color: #0F172A !important;
-}
 
 .bg-gray-950 {
   background-color: #0B1222 !important;
@@ -1130,7 +1166,7 @@ a.text-brand-3:hover {
   padding: 6px 15px;
   font-size: 13px;
   line-height: 16px;
-  color: #ffffff;
+  color: #A7BDDDFF;
 }
 .btn.btn-tag:hover {
   background-color: #0EA5EA !important;
@@ -1147,7 +1183,7 @@ a.text-brand-3:hover {
 .btn.btn-border-linear {
   border: 2px solid #0EA5EA;
   border-radius: 50px;
-  color: #ffffff;
+  color: var(--color-400);
   padding: 5px 15px;
   font-size: 14px;
   line-height: 20px;
@@ -1616,7 +1652,7 @@ input {
   border-style: solid;
   margin-bottom: 30px;
   border: 1px solid #222F43;
-  background-color: #131C31;
+  background-color: var(--bg-color-850);
 }
 .card-blog-1 .card-image {
   position: relative;
@@ -1656,6 +1692,7 @@ input {
   border-radius: 16px;
   align-items: center;
   margin-bottom: 30px;
+  background-color: var(--bg-color-850);
 }
 .card-style-2 .card-image {
   width: 32px;
@@ -2409,7 +2446,7 @@ input {
   width: 40px;
   height: 22px;
   margin-left: 0px;
-  background-image: url(./assets/imgs/template/icons/mode.svg);
+  background-image: url(./assets/imgs/template/icons/mode-day.svg);
   background-position: left 2px center;
   background-color: #7F92B0;
   border-color: #7F92B0;
@@ -2422,6 +2459,9 @@ input {
 .switch-button .form-switch .form-check-input:checked {
   background-position: right 2px center;
   background-image: url(./assets/imgs/template/icons/mode.svg);
+}
+.theme-day .switch-button .form-switch .form-check-input:checked {
+  background-image: url(./assets/imgs/template/icons/mode-day.svg);
 }
 
 .sticky-bar.stick {
@@ -5551,6 +5591,7 @@ iframe.google-map {
 
 .accordion-body {
   padding: 20px 0px 40px 0px;
+  color: var(--color-400);
 }
 
 .icon-media {
@@ -5613,6 +5654,7 @@ iframe.google-map {
 }
 .box-tags .btn {
   margin-bottom: 10px;
+  color: var(--color-400);
 }
 
 .box-comments {
@@ -6841,9 +6883,7 @@ iframe.google-map {
 .theme-day .logo-night {
   display: none;
 }
-.theme-day .switch-button .form-switch .form-check-input {
-  background-image: url(./assets/imgs/template/icons/mode-day.svg);
-}
+
 .theme-day .pagination li a {
   background-color: #7F92B0;
 }
