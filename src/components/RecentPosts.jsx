@@ -36,14 +36,12 @@ function RecentPosts() {
 
                         {displayedItems.map(item => (
                             <div className="card-list-posts wow animate__animated animate__fadeIn" key={item.id}>
-                            <div className="card-image hover-up"><Link to="/post"><img
+                            <div className="card-image hover-up"><Link to={`/single-post/${item.id}`}><img
                                 src={item.image ? item.image : img_news2} alt="Genz"/></Link>
                             </div>
                             <div className="card-info"><a
-                                className="btn btn-tag bg-gray-800 hover-up"
-                                href="blog-archive.html">Working Tips</a><a
-                                href="single-sidebar.html">
-                                <h4 className="mt-15 mb-20 color-white">{item.title}</h4></a>
+                                className="btn btn-tag bg-gray-800 hover-up">Working Tips</a><Link to={`/single-post/${item.id}`}>
+                                <h4 className="mt-15 mb-20 color-white">{item.title}</h4></Link>
                                 <p className="color-gray-500">{item.description}</p>
                                 <div className="row mt-20">
                                     <div className="col-7">
@@ -62,7 +60,9 @@ function RecentPosts() {
                     </div>
                     <Pagination handlePageChange={setCurrentPage} totalPages={totalPages}/>
                 </div>
+                <div className="col-lg-4">
                 <PopularPosts/>
+                </div>
             </div>
         </>
     )

@@ -5563,7 +5563,7 @@ iframe.google-map {
   width: 20px;
 }
 .icon-media.icon-fb {
-  background-image: url(../imgs/page/single/fb.svg);
+  background-image: url(./assets/imgs/page/single/fb.svg);
 }
 .icon-media.icon-tw {
   background-image: url(./assets/imgs/page/single/tw.svg);

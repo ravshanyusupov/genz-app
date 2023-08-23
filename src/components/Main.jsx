@@ -70,119 +70,115 @@ function Main() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="mb-70">
-                                        <div className="box-topics border-gray-800 bg-gray-850">
-                                            <div className="row">
-                                                <div className="col-lg-2">
-                                                    <h5 className="mb-15 color-white wow animate__animated animate__fadeInUp"
-                                                        data-wow-delay="0s">Hot topics</h5>
-                                                    <p className="color-gray-500 mb-20 wow animate__animated animate__fadeInUp"
-                                                       data-wow-delay=".3s">Don't miss out on the latest news about Travel
-                                                        tips, Hotels review, Food guide...</p>
-                                                    <div
-                                                        className="box-buttons-slider position-relative wow animate__animated animate__zoomIn">
-                                                        <div
-                                                            className="swiper-button-prev swiper-button-prev-style-1"></div>
-                                                        <div
-                                                            className="swiper-button-next swiper-button-next-style-1"></div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-10">
-                                                    <div className="box-swiper">
-                                                        <div className="swiper-container swiper-group-5">
-                                                            <div className="swiper-wrapper">
-                                                                <div className="swiper-slide">
-                                                                    <div className="card-style-1"><a
-                                                                        href="blog-archive.html">
-                                                                        <div className="card-image"><img
-                                                                            src={sport}
-                                                                            alt="Genz"/>
-                                                                            <div className="card-info">
-                                                                                <div className="info-bottom">
-                                                                                    <h6 className="color-white mb-5">Sport</h6>
-                                                                                    <p className="text-xs color-gray-500">38
-                                                                                        Articles</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a></div>
-                                                                </div>
-                                                                <div className="swiper-slide">
-                                                                    <div className="card-style-1"><a
-                                                                        href="blog-archive.html">
-                                                                        <div className="card-image"><img
-                                                                            src={travel}
-                                                                            alt="Genz"/>
-                                                                            <div className="card-info">
-                                                                                <div className="info-bottom">
-                                                                                    <h6 className="color-white mb-5">Travel</h6>
-                                                                                    <p className="text-xs color-gray-500">63
-                                                                                        Articles</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a></div>
-                                                                </div>
-                                                                <div className="swiper-slide">
-                                                                    <div className="card-style-1"><a
-                                                                        href="blog-archive.html">
-                                                                        <div className="card-image"><img
-                                                                            src={desisn}
-                                                                            alt="Genz"/>
-                                                                            <div className="card-info">
-                                                                                <div className="info-bottom">
-                                                                                    <h6 className="color-white mb-5">Design</h6>
-                                                                                    <p className="text-xs color-gray-500">78
-                                                                                        Articles</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a></div>
-                                                                </div>
-                                                                <div className="swiper-slide">
-                                                                    <div className="card-style-1"><a
-                                                                        href="blog-archive.html">
-                                                                        <div className="card-image"><img
-                                                                            src={movie}
-                                                                            alt="Genz"/>
-                                                                            <div className="card-info">
-                                                                                <div className="info-bottom">
-                                                                                    <h6 className="color-white mb-5">Movie</h6>
-                                                                                    <p className="text-xs color-gray-500">125
-                                                                                        Articles</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a></div>
-                                                                </div>
-                                                                <div className="swiper-slide">
-                                                                    <div className="card-style-1"><a
-                                                                        href="blog-archive.html">
-                                                                        <div className="card-image"><img
-                                                                            src={lifestyle}
-                                                                            alt="Genz"/>
-                                                                            <div className="card-info">
-                                                                                <div className="info-bottom">
-                                                                                    <h6 className="color-white mb-5">Lifestyle</h6>
-                                                                                    <p className="text-xs color-gray-500">78
-                                                                                        Articles</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {/*<div className="mb-70">*/}
+                                    {/*    <div className="box-topics border-gray-800 bg-gray-850">*/}
+                                    {/*        <div className="row">*/}
+                                    {/*            <div className="col-lg-2">*/}
+                                    {/*                <h5 className="mb-15 color-white wow animate__animated animate__fadeInUp"*/}
+                                    {/*                    data-wow-delay="0s">Hot topics</h5>*/}
+                                    {/*                <p className="color-gray-500 mb-20 wow animate__animated animate__fadeInUp"*/}
+                                    {/*                   data-wow-delay=".3s">Don't miss out on the latest news about Travel*/}
+                                    {/*                    tips, Hotels review, Food guide...</p>*/}
+                                    {/*                <div*/}
+                                    {/*                    className="box-buttons-slider position-relative wow animate__animated animate__zoomIn">*/}
+                                    {/*                    <div*/}
+                                    {/*                        className="swiper-button-prev swiper-button-prev-style-1"></div>*/}
+                                    {/*                    <div*/}
+                                    {/*                        className="swiper-button-next swiper-button-next-style-1"></div>*/}
+                                    {/*                </div>*/}
+                                    {/*            </div>*/}
+                                    {/*            <div className="col-lg-10">*/}
+                                    {/*                <div className="box-swiper">*/}
+                                    {/*                    <div className="swiper-container swiper-group-5">*/}
+                                    {/*                        <div className="swiper-wrapper">*/}
+                                    {/*                            <div className="swiper-slide">*/}
+                                    {/*                                <div className="card-style-1"><a*/}
+                                    {/*                                    href="blog-archive.html">*/}
+                                    {/*                                    <div className="card-image"><img*/}
+                                    {/*                                        src={sport}*/}
+                                    {/*                                        alt="Genz"/>*/}
+                                    {/*                                        <div className="card-info">*/}
+                                    {/*                                            <div className="info-bottom">*/}
+                                    {/*                                                <h6 className="color-white mb-5">Sport</h6>*/}
+                                    {/*                                                <p className="text-xs color-gray-500">38*/}
+                                    {/*                                                    Articles</p>*/}
+                                    {/*                                            </div>*/}
+                                    {/*                                        </div>*/}
+                                    {/*                                    </div>*/}
+                                    {/*                                </a></div>*/}
+                                    {/*                            </div>*/}
+                                    {/*                            <div className="swiper-slide">*/}
+                                    {/*                                <div className="card-style-1"><a*/}
+                                    {/*                                    href="blog-archive.html">*/}
+                                    {/*                                    <div className="card-image"><img*/}
+                                    {/*                                        src={travel}*/}
+                                    {/*                                        alt="Genz"/>*/}
+                                    {/*                                        <div className="card-info">*/}
+                                    {/*                                            <div className="info-bottom">*/}
+                                    {/*                                                <h6 className="color-white mb-5">Travel</h6>*/}
+                                    {/*                                                <p className="text-xs color-gray-500">63*/}
+                                    {/*                                                    Articles</p>*/}
+                                    {/*                                            </div>*/}
+                                    {/*                                        </div>*/}
+                                    {/*                                    </div>*/}
+                                    {/*                                </a></div>*/}
+                                    {/*                            </div>*/}
+                                    {/*                            <div className="swiper-slide">*/}
+                                    {/*                                <div className="card-style-1"><a*/}
+                                    {/*                                    href="blog-archive.html">*/}
+                                    {/*                                    <div className="card-image"><img*/}
+                                    {/*                                        src={desisn}*/}
+                                    {/*                                        alt="Genz"/>*/}
+                                    {/*                                        <div className="card-info">*/}
+                                    {/*                                            <div className="info-bottom">*/}
+                                    {/*                                                <h6 className="color-white mb-5">Design</h6>*/}
+                                    {/*                                                <p className="text-xs color-gray-500">78*/}
+                                    {/*                                                    Articles</p>*/}
+                                    {/*                                            </div>*/}
+                                    {/*                                        </div>*/}
+                                    {/*                                    </div>*/}
+                                    {/*                                </a></div>*/}
+                                    {/*                            </div>*/}
+                                    {/*                            <div className="swiper-slide">*/}
+                                    {/*                                <div className="card-style-1"><a*/}
+                                    {/*                                    href="blog-archive.html">*/}
+                                    {/*                                    <div className="card-image"><img*/}
+                                    {/*                                        src={movie}*/}
+                                    {/*                                        alt="Genz"/>*/}
+                                    {/*                                        <div className="card-info">*/}
+                                    {/*                                            <div className="info-bottom">*/}
+                                    {/*                                                <h6 className="color-white mb-5">Movie</h6>*/}
+                                    {/*                                                <p className="text-xs color-gray-500">125*/}
+                                    {/*                                                    Articles</p>*/}
+                                    {/*                                            </div>*/}
+                                    {/*                                        </div>*/}
+                                    {/*                                    </div>*/}
+                                    {/*                                </a></div>*/}
+                                    {/*                            </div>*/}
+                                    {/*                            <div className="swiper-slide">*/}
+                                    {/*                                <div className="card-style-1"><a*/}
+                                    {/*                                    href="blog-archive.html">*/}
+                                    {/*                                    <div className="card-image"><img*/}
+                                    {/*                                        src={lifestyle}*/}
+                                    {/*                                        alt="Genz"/>*/}
+                                    {/*                                        <div className="card-info">*/}
+                                    {/*                                            <div className="info-bottom">*/}
+                                    {/*                                                <h6 className="color-white mb-5">Lifestyle</h6>*/}
+                                    {/*                                                <p className="text-xs color-gray-500">78*/}
+                                    {/*                                                    Articles</p>*/}
+                                    {/*                                            </div>*/}
+                                    {/*                                        </div>*/}
+                                    {/*                                    </div>*/}
+                                    {/*                                </a></div>*/}
+                                    {/*                            </div>*/}
+                                    {/*                        </div>*/}
+                                    {/*                    </div>*/}
+                                    {/*                </div>*/}
+                                    {/*            </div>*/}
+                                    {/*        </div>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
                                     <Posts/>
-                                    <div className="text-center mb-50"><a
-                                        className="btn btn-linear btn-load-more wow animate__animated animate__zoomIn">
-                                        Show More Posts
-                                        <i><CaretRightFilled/></i></a></div>
                                     <PopularTags/>
                                     <RecentPosts/>
                                 </div>

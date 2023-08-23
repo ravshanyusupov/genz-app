@@ -7,6 +7,7 @@ import ContactPage from "./pages/ContactPage.jsx";
 import PostDetailPage from "./pages/PostDetailPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import CategoryPage from "./pages/CategoryPage.jsx";
+import SinglePost from "./pages/SinglePost.jsx";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
                 <Route path='/register' element={<RegisterPage/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>
                 <Route path='/post' element={<PostDetailPage/>}/>
-                <Route path='/category' element={<CategoryPage/>}/>
+                <Route path='/category/:id' element={<CategoryPage/>}/>
+                <Route path='/single-post/:id' element={<SinglePost/>}/>
                 <Route path='/*' element={<PageNotFoundPage/>}/>
             </Routes>
         </BrowserRouter>

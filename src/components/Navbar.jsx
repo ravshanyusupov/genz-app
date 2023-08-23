@@ -35,6 +35,7 @@ function Navbar() {
                                         onClick={() => setActive('Home')} to="/">Home</Link></li>
                                     <li className="has-children"><Link className="color-gray-500" to="/about">About Me</Link></li>
                                     <li className="has-children"><Link className="color-gray-500" to="/category">Category</Link></li>
+                                    <li className="has-children"><Link className="color-gray-500" to="/single-post">Single Post</Link></li>
                                     <li className="has-children"><a className="color-gray-500">Projects</a></li>
                                     <li><Link
                                         to="/contact"

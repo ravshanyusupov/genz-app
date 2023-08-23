@@ -3,6 +3,7 @@ import LastComments from "./LastComments.jsx";
 import BottomGallery from "./BottomGallery.jsx";
 import api from '../axios.js'
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 function PopularPosts() {
     const [posts, setPosts] = useState([])
@@ -19,7 +20,6 @@ function PopularPosts() {
     }, [])
     return (
         <>
-            <div className="col-lg-4">
                 <div className="sidebar">
                     <div className="box-sidebar bg-gray-850 border-gray-800">
                         <div className="head-sidebar wow animate__animated animate__fadeIn">
@@ -30,16 +30,16 @@ function PopularPosts() {
                                 {posts.map(item => (
                                     <div
                                         className="item-post wow animate__animated animate__fadeIn" key={item.id}>
-                                        <div className="image-post"><a
-                                            href="single-sidebar.html"><img
+                                        <div className="image-post"><Link
+                                            to={`/single-post/${item.id}`}><img
                                             src={item.image ? item.image : post4}
-                                            alt="Genz"/></a></div>
-                                        <div className="info-post border-gray-800"><a
-                                            href="single-sidebar.html">
-                                            <h6 className="color-white">{item.title}</h6></a><span
+                                            alt="Genz"/></Link></div>
+                                        <div className="info-post border-gray-800"><Link
+                                            to={`/single-post/${item.id}`}>
+                                            <h6 className="color-white">{item.title}</h6></Link><span
                                             className="color-gray-700">{item.read_time} mins read</span>
                                             <ul className="d-inline-block">
-                                                <li className="color-gray-700">{item.published.substring(0,10)}</li>
+                                                <li className="color-gray-700">{item.published?.substring(0,10)}</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -50,7 +50,6 @@ function PopularPosts() {
                     <LastComments/>
                     <BottomGallery/>
                 </div>
-            </div>
         </>
     )
 }
